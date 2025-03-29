@@ -1,28 +1,84 @@
-# 定义数据
-data = [
-    "国内进港主接: 国内进港副接",
-    "国内进港主接: 国际进港主接",
-    "国内进港主接: 国际进港副接",
-    "国内进港主接: 国内普通柜台",
-    "国内进港主接: 国内功能柜台",
-    "国内进港主接: 国际普通柜台",
-    "国内进港主接: 国内进港行李卸带",
-    "国内进港主接: 国内行李出库",
-    "国内进港主接: 国际行李出库",
-    "国内进港主接: 国际进港行李卸带",
-    "国内进港主接: 国内进港主接",
-    "国内进港主接: 国内进港副接",
-    "国内进港主接: 国际进港主接",
-    "国内进港主接: 国际进港副接",
-    "国内进港主接: 国内普通柜台",
-    "国内进港主接: 国内功能柜台",
-    "国内进港主接: 国际普通柜台",
-    "国内进港主接: 国内进港行李卸带",
-    "国内进港主接: 国内行李出库",
-    "国内进港主接: 国际行李出库",
-    "国内进港主接: 国际进港行李卸带"
-]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>考核分类展示</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>考核分类展示</h1>
+    <table id="data-table">
+        <thead>
+            <tr>
+                <th>主分类</th>
+                <th>子分类</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- 数据将通过JavaScript动态插入 -->
+        </tbody>
+    </table>
 
-# 打印数据
-for item in data:
-    print(item)
+    <script>
+        // 数据
+        const data = [
+            "国内进港主接: 国内进港副接",
+            "国内进港主接: 国际进港主接",
+            "国内进港主接: 国际进港副接",
+            "国内进港主接: 国内普通柜台",
+            "国内进港主接: 国内功能柜台",
+            "国内进港主接: 国际普通柜台",
+            "国内进港主接: 国内进港行李卸带",
+            "国内进港主接: 国内行李出库",
+            "国内进港主接: 国际行李出库",
+            "国内进港主接: 国际进港行李卸带",
+            "国内进港主接: 国内进港主接",
+            "国内进港主接: 国内进港副接",
+            "国内进港主接: 国际进港主接",
+            "国内进港主接: 国际进港副接",
+            "国内进港主接: 国内普通柜台",
+            "国内进港主接: 国内功能柜台",
+            "国内进港主接: 国际普通柜台",
+            "国内进港主接: 国内进港行李卸带",
+            "国内进港主接: 国内行李出库",
+            "国内进港主接: 国际行李出库",
+            "国内进港主接: 国际进港行李卸带"
+        ];
+
+        // 获取表格的tbody部分
+        const tableBody = document.querySelector("#data-table tbody");
+
+        // 动态生成表格内容
+        data.forEach(item => {
+            const row = document.createElement("tr");
+            const [main, sub] = item.split(": ");
+            const mainCell = document.createElement("td");
+            const subCell = document.createElement("td");
+
+            mainCell.textContent = main;
+            subCell.textContent = sub;
+
+            row.appendChild(mainCell);
+            row.appendChild(subCell);
+            tableBody.appendChild(row);
+        });
+    </script>
+</body>
+</html>
