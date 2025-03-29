@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>考核分类展示</title>
+    <title>考核分类</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -23,8 +23,8 @@
     </style>
 </head>
 <body>
-    <h1>考核分类展示</h1>
-    <table id="data-table">
+    <h1>考核分类</h1>
+    <table>
         <thead>
             <tr>
                 <th>主分类</th>
@@ -32,53 +32,47 @@
             </tr>
         </thead>
         <tbody>
-            <!-- 数据将通过JavaScript动态插入 -->
+        <tr>
+            <td>国内进港主接</td>
+            <td>国内进港副接</td>
+        </tr>
+        <tr>
+            <td>国内进港主接</td>
+            <td>国际进港主接</td>
+        </tr>
+        <tr>
+            <td>国内进港主接</td>
+            <td>国际进港副接</td>
+        </tr>
+        <tr>
+            <td>国内进港主接</td>
+            <td>国内普通柜台</td>
+        </tr>
+        <tr>
+            <td>国内进港主接</td>
+            <td>国内功能柜台</td>
+        </tr>
+        <tr>
+            <td>国内进港主接</td>
+            <td>国际普通柜台</td>
+        </tr>
+        <tr>
+            <td>国内进港主接</td>
+            <td>国内进港行李卸带</td>
+        </tr>
+        <tr>
+            <td>国内进港主接</td>
+            <td>国内行李出库</td>
+        </tr>
+        <tr>
+            <td>国内进港主接</td>
+            <td>国际行李出库</td>
+        </tr>
+        <tr>
+            <td>国内进港主接</td>
+            <td>国际进港行李卸带</td>
+        </tr>
         </tbody>
     </table>
-
-    <script>
-        // 数据
-        const data = [
-            "国内进港主接: 国内进港副接",
-            "国内进港主接: 国际进港主接",
-            "国内进港主接: 国际进港副接",
-            "国内进港主接: 国内普通柜台",
-            "国内进港主接: 国内功能柜台",
-            "国内进港主接: 国际普通柜台",
-            "国内进港主接: 国内进港行李卸带",
-            "国内进港主接: 国内行李出库",
-            "国内进港主接: 国际行李出库",
-            "国内进港主接: 国际进港行李卸带",
-            "国内进港主接: 国内进港主接",
-            "国内进港主接: 国内进港副接",
-            "国内进港主接: 国际进港主接",
-            "国内进港主接: 国际进港副接",
-            "国内进港主接: 国内普通柜台",
-            "国内进港主接: 国内功能柜台",
-            "国内进港主接: 国际普通柜台",
-            "国内进港主接: 国内进港行李卸带",
-            "国内进港主接: 国内行李出库",
-            "国内进港主接: 国际行李出库",
-            "国内进港主接: 国际进港行李卸带"
-        ];
-
-        // 获取表格的tbody部分
-        const tableBody = document.querySelector("#data-table tbody");
-
-        // 动态生成表格内容
-        data.forEach(item => {
-            const row = document.createElement("tr");
-            const [main, sub] = item.split(": ");
-            const mainCell = document.createElement("td");
-            const subCell = document.createElement("td");
-
-            mainCell.textContent = main;
-            subCell.textContent = sub;
-
-            row.appendChild(mainCell);
-            row.appendChild(subCell);
-            tableBody.appendChild(row);
-        });
-    </script>
 </body>
 </html>
