@@ -8,7 +8,7 @@
     <img src="https://img.shields.io/badge/License-MIT-green">
 </p>
 
-> 部分代码源自于互联网，侵删！
+> 选择资质序号！
 
 # Web
 
